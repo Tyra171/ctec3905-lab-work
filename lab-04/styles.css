@@ -3,6 +3,11 @@ body {
   font-family: "Truculenta", sans-serif;
 }
 
+header {
+  background-color: hsl(100,70%, 80%);
+  color: white;
+}
+
 header h1 {
   margin: 0;
 }
@@ -10,16 +15,15 @@ header h1 {
 nav {
   display: flex;
   flex-direction: column;
-  transform: translateX(100vw);
-  position: inherit;
+  transform: translateX(100vh);
+  position: fixed;
   width: 100%;
   top: 0;
-  height: 30vh;
-  background-color: rgba(250, 0, 0, 0.3);
-  transition: 0.4s;
-  align-items: center;
+  height: auto;
+  transition: 0.5s;
   justify-content: space-around;
   font-size: 3em;
+  background-color: rgba(250, 0, 0, 0.3);
 }
 
 nav.open {
@@ -28,33 +32,29 @@ nav.open {
 
 
 nav a {
-  padding: 0.25em 0.5em;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: sans-serif;;
-  color: pink;
-  background-color: black;
-  text-align: center;
+    text-decoration: none;
+    color: pink;
+    background-color: black;
+    text-align: center;
 }
 
 #menuToggler {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  font-size: 2em;
-  background-color: hsl(11, 100%, 80%)
+    position: fixed;
+    right: 0;
+    z-index: 1;
+    top: 0;
+    font-size: 2em;
+    background-color: hsl(11, 100%, 80%)
 }
 
-#menuToggler, nav a, p {
+#menuToggler, nav a, p, h1 {
   padding: 0.25rem 0.5rem;
 }
 
 
 @media screen and (min-width: 500px) {
   #menuToggler {
-   display: none;
-   position: static;
+  display: none;
 }
 
   header{
@@ -65,8 +65,19 @@ nav a {
   }
 
   nav {
+    position: static;
+    height: auto;
+    width: auto;
+    transform: translateX(0);
+    background-color: transparent;
+    font-size: 1em;
+    justify-content: flex-end;
     display: flex;
     flex-direction: row;
   }
+
+}
+
+@media screen and (min-width: 700px) {
 
 }
