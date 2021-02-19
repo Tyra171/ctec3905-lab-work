@@ -6,13 +6,43 @@ body {
 nav {
   display: flex;
   flex-direction: column;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transform: translateX(100vh);
+  transition: 0.5;
 }
 
 nav.open {
-  display: flex;
+  transform: translateX(0);
+}
+
+
+nav a {
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;;
+  color: green;
+}
+
+#menuToggler {
+  font-size: 2em;
+  background-color: hsl(100, 70%, 50%)
+}
+
+#menuToggler, nav a, p {
+  padding: 0.25rem 0.5rem;
+}
+
+@media screen and (min-width: 500px) {
+  #menuToggler {
+   display: none;
 }
 
 nav {
-  padding: 0.25em 0.5em;
-  text-decoration: none;
+    display: flex;
+    flex-direction: row;
+  }
+
 }
