@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  font-family: "Truculenta", sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav {
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+}
