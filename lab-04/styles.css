@@ -3,14 +3,23 @@ body {
   font-family: "Truculenta", sans-serif;
 }
 
+header h1 {
+  margin: 0;
+}
+
 nav {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  transform: translateX(100vw);
+  position: inherit;
   width: 100%;
   top: 0;
-  transform: translateX(100vh);
-  transition: 0.5;
+  height: 30vh;
+  background-color: rgba(250, 0, 0, 0.3);
+  transition: 0.4s;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 3em;
 }
 
 nav.open {
@@ -23,24 +32,39 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   font-family: sans-serif;;
-  color: green;
+  color: pink;
+  background-color: black;
+  text-align: center;
 }
 
 #menuToggler {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
   font-size: 2em;
-  background-color: hsl(100, 70%, 50%)
+  background-color: hsl(11, 100%, 80%)
 }
 
 #menuToggler, nav a, p {
   padding: 0.25rem 0.5rem;
 }
 
+
 @media screen and (min-width: 500px) {
   #menuToggler {
    display: none;
+   position: static;
 }
 
-nav {
+  header{
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
     display: flex;
     flex-direction: row;
   }
