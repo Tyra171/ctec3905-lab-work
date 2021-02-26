@@ -4,8 +4,8 @@ body {
 }
 
 header {
-  background-color: hsl(100,70%, 80%);
-  color: white;
+  background-color: black;
+  color: pink;
 }
 
 header h1 {
